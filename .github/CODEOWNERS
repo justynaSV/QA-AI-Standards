@@ -1,0 +1,7 @@
+# QA AI standards hub - code owners
+
+# Default owner for all files
+* @justynaSV
+
+# Optional explicit ownership (same owner for clarity)
+templates/ @justynaSV
