@@ -1,5 +1,14 @@
 # AI Usage Policy for QA Team
 
+**Version:** 1.1
+**Last updated:** 2026-08-07
+
+## Changelog
+| Version | Date | Change |
+|---|---|---|
+| 1.1 | 2026-08-07 | Removed onboarding template reference; added glossary and prompt examples links |
+| 1.0 | — | Initial policy: allowed/prohibited usage, review requirement, risk escalation, traceability, data handling |
+
 ## 1. Core principle
 AI is an assistant, not an approver.  
 **Human QA is always accountable** for final artifacts, decisions, and release impact.
@@ -50,3 +59,7 @@ Never include in prompts:
 - confidential production payloads.
 
 Use masked/anonymized examples whenever context is needed.
+
+## 8. Related resources
+- Terminology used in this policy: `glossary.md`
+- Example prompts for common QA tasks: `templates/prompt-examples.md`

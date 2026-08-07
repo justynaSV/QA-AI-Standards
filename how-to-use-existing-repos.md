@@ -21,6 +21,14 @@ Use when:
 - validating Given/When/Then quality,
 - improving scenario readability and consistency.
 
+## 3) Playwright testing standards
+Repository: https://github.com/justynaSV/playwright-testing  
+Description: Conventions for writing Playwright tests consistently across the team. Currently a scaffold — conventions/examples are being added incrementally.
+
+Use when:
+- writing/reviewing Playwright test specs,
+- deciding on locator strategy, POM/fixtures structure, or tagging conventions.
+
 ---
 
 ## Integration model (what lives where)
@@ -29,9 +37,9 @@ Use when:
 Contains:
 - universal AI QA policy,
 - review and traceability minimum,
-- onboarding template for cross-project usage.
+- prompt examples and glossary for cross-project usage.
 
-## Specialized standards repos (`postman-testing`, `gherkin-scenarios-tmp`)
+## Specialized standards repos (`postman-testing`, `gherkin-scenarios-tmp`, `playwright-testing`)
 Contain:
 - craft-specific standards,
 - examples and conventions for that testing style.
@@ -51,6 +59,7 @@ For any QA task:
 2. Apply relevant specialized standard:
    - Postman/API → `justynaSV/postman-testing`
    - BDD/Gherkin → `justynaSV/gherkin-scenarios-tmp`
+   - Playwright → `justynaSV/playwright-testing`
 3. Apply the current project’s own constraints
 4. Validate with AI output checklist before finalizing
 
