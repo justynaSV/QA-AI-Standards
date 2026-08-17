@@ -66,4 +66,4 @@ Use masked/anonymized examples whenever context is needed.
 ## 8. Related resources
 - Terminology used in this policy: `glossary.md`
 - Example prompts for common QA tasks: `templates/prompt-examples.md`
-- Ready-to-use Skills that apply this policy automatically for common QA tasks: `skills/` — see the root `README.md` for what each one does and how to use it. Skills for a craft area that has its own project-embedded AI mechanism (e.g. Gherkin's `gherkin-scenario-generator`) live in that project's repo instead — see `how-to-use-existing-repos.md`.
+- Ready-to-use Skills that apply this policy automatically for common QA tasks: `skills/` — see the root `README.md` for what each one does and how to use it. Skills for a craft area that has its own project-embedded AI mechanism live in that project's repo instead — see `how-to-use-existing-repos.md`.
