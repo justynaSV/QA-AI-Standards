@@ -9,16 +9,9 @@ General rules for all prompts:
 
 ---
 
-## 1. Drafting Gherkin scenarios
+## 1. Gherkin scenarios
 
-**Weak prompt:**
-> Write test cases for the login page.
-
-**Better prompt:**
-> Write Gherkin scenarios for the login feature based on this acceptance criteria: [paste AC].
-> Cover: happy path, invalid password, locked account after 5 failed attempts, empty fields.
-> List any assumptions you made separately at the end.
-> Use existing conventions from `gherkin-scenarios-tmp`.
+Superseded — don't prompt from scratch for this one. Use the `/gherkin-scenarios` Copilot prompt built into the `gherkin-scenarios` template repo and its project copies, including `gherkin-scenarios-tmp`. It already knows the project's real module folders, tagging, and traceability format, which a hand-written prompt here can't. See `how-to-use-existing-repos.md` for why this lives in the project repo instead of here.
 
 ---
 
