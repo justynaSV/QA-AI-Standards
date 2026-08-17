@@ -53,7 +53,7 @@ For each QA task:
 1. Follow rules from `ai-usage-policy.md`
 2. Use the relevant specialized standard:
    - API/Postman work → `justynaSV/postman-testing`, or `skills/qa-postman-assertion-reviewer` for a quick script review
-   - BDD/Gherkin work → `justynaSV/gherkin-scenarios-tmp` (or your project's copy of the `gherkin-scenarios` template) — use its built-in `gherkin-scenario-generator` skill / `/gherkin-scenarios` Copilot prompt to draft scenarios directly, no hub skill needed
+   - BDD/Gherkin work → `justynaSV/gherkin-scenarios-tmp` (or your project's copy of the `gherkin-scenarios` template) — use `/gherkin-scenarios` Copilot prompt to draft scenarios directly, no hub skill needed
    - Playwright test work → `justynaSV/playwright-testing`
 3. Apply domain-specific constraints from the current project repository
 4. Complete `templates/ai-output-review-checklist.md` before accepting AI-assisted output — or run `skills/qa-ai-output-review-checklist-runner` for an item-by-item pass
