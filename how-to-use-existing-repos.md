@@ -37,18 +37,32 @@ Use when:
 Contains:
 - universal AI QA policy,
 - review and traceability minimum,
-- prompt examples and glossary for cross-project usage.
+- prompt examples and glossary for cross-project usage,
+- `skills/` — reusable AI Skills for cross-cutting QA tasks and for craft repos that don't have their own AI mechanism yet.
 
 ## Specialized standards repos (`postman-testing`, `gherkin-scenarios-tmp`, `playwright-testing`)
 Contain:
 - craft-specific standards,
-- examples and conventions for that testing style.
+- examples and conventions for that testing style,
+- where applicable, their own AI mechanism (a Claude Skill under `.claude/skills/`, a Copilot prompt under `.github/prompts/`, or equivalent) built with direct knowledge of that repo's real structure, scripts, and conventions. `gherkin-scenarios` (and its project copies) is the current example — see below.
 
 ## Project repositories (team/product-specific)
 Contain:
 - domain/business specifics,
 - environment constraints,
 - project-level test strategy and priorities.
+
+---
+
+## Where should an AI skill live?
+
+Skills are executable, not just reference text — once saved, Claude applies them automatically instead of a person having to remember and paste a prompt. That makes *where* a skill lives matter more than where a static doc lives: a skill is only as good as its access to the actual project it's operating on.
+
+1. **The project/craft repo already has its own AI mechanism** (a Claude Skill, a Copilot prompt, or equivalent) — use that, not a hub skill. It will always outperform a generic hub skill, because it has context a hub skill can't: real module folders, real npm scripts, real save paths. Example: `gherkin-scenarios` and its project copies (including `gherkin-scenarios-tmp`) ship `gherkin-scenario-generator` (Claude) / `/gherkin-scenarios` (Copilot) — use that directly.
+2. **The craft repo has no AI mechanism of its own** — either the task doesn't need project-specific context (e.g. reviewing a standalone Postman script against `postman-testing` conventions), or the repo is still a scaffold (e.g. `playwright-testing`) — a hub skill in `skills/` is the right home, until the specialized repo builds its own.
+3. **The task is cross-cutting QA process, not tied to any one craft repo** (rewriting a bug report, running the AI output review checklist) — this belongs in the hub permanently. There's no more-specific repo for it to move to.
+
+When a specialized repo builds its own mechanism for something the hub currently covers, retire or narrow the hub skill's description rather than keeping both — two skills that could plausibly trigger for the same task just creates ambiguity about which one should.
 
 ---
 

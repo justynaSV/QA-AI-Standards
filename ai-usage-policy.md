@@ -1,11 +1,12 @@
 # AI Usage Policy for QA Team
 
-**Version:** 1.1
-**Last updated:** 2026-08-07
+**Version:** 1.2
+**Last updated:** 2026-08-17
 
 ## Changelog
 | Version | Date | Change |
 |---|---|---|
+| 1.2 | 2026-08-17 | Cross-referenced `skills/`; clarified that the review requirement applies to skill-produced output the same as ad-hoc prompting |
 | 1.1 | 2026-08-07 | Removed onboarding template reference; added glossary and prompt examples links |
 | 1.0 | — | Initial policy: allowed/prohibited usage, review requirement, risk escalation, traceability, data handling |
 
@@ -36,6 +37,8 @@ Before accepting AI-assisted output:
 
 Use: `templates/ai-output-review-checklist.md`.
 
+This requirement applies regardless of how the output was produced — a one-off prompt or a saved skill from `skills/`. A skill makes the *input* consistent; it does not change the review obligation.
+
 ## 5. Risk-based escalation
 - Low impact (formatting/rewording): self-review may be enough.
 - Medium impact (new test scenarios/assertions): peer QA review required.
@@ -63,3 +66,4 @@ Use masked/anonymized examples whenever context is needed.
 ## 8. Related resources
 - Terminology used in this policy: `glossary.md`
 - Example prompts for common QA tasks: `templates/prompt-examples.md`
+- Ready-to-use Skills that apply this policy automatically for common QA tasks: `skills/` — see the root `README.md` for what each one does and how to use it. Skills for a craft area that has its own project-embedded AI mechanism (e.g. Gherkin's `gherkin-scenario-generator`) live in that project's repo instead — see `how-to-use-existing-repos.md`.
