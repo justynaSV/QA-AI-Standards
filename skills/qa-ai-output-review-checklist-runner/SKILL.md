@@ -1,6 +1,6 @@
 ---
 name: qa-ai-output-review-checklist-runner
-description: Walk through the QA team's AI Output Review Checklist against a specific AI-generated artifact (test scenario, bug report, script, edge cases, etc.), producing an explicit pass/fail assessment per item rather than a vague "looks good." Use this whenever asked to review, validate, sign off on, or check an AI-assisted QA artifact before accepting it, or to "run the checklist" on something.
+description: Walk through the QA team's AI Output Review Checklist against a specific AI-generated artifact (test scenario, bug report, script, edge cases, etc.), producing an explicit pass/fail assessment per item rather than a vague "looks good." Accepts the requirement/acceptance criteria as pasted text or a Jira URL/key. Use this whenever asked to review, validate, sign off on, or check an AI-assisted QA artifact before accepting it, or to "run the checklist" on something.
 ---
 
 # QA AI Output Review Checklist Runner
@@ -13,7 +13,7 @@ It does not make the accept/reject decision. That decision, the reviewer's name,
 
 ## Step 1: Gather what you need
 
-- The requirement, story, or acceptance criteria the artifact is supposed to satisfy.
+- **The requirement, story, or acceptance criteria the artifact is supposed to satisfy.** If given as a Jira issue URL (e.g. `https://<site>.atlassian.net/browse/PROJ-123`) or a bare issue key (e.g. `PROJ-123`), use the Atlassian MCP tools, if available, to fetch the summary, description, and acceptance-criteria fields instead of asking for a paste. If the Atlassian MCP tools are unavailable or the fetch fails, say so and ask the user to paste the requirement text instead.
 - The AI-generated artifact itself.
 - The declared scope of AI assistance (e.g. "scenario draft," "assertion proposal") if known — if not, ask, since it affects which risk tier applies.
 
@@ -39,7 +39,7 @@ For each item in the checklist's five sections (Requirement fit, Quality of test
 
 ### Traceability
 - [Pass/Fail/N/A] Artifact is marked: `AI-assisted: yes (scope: ...)` — <reason>
-- [Pass/Fail/N/A] Linked to relevant task/ticket/PR context — <reason>
+- [Pass/Fail/N/A] Linked to relevant task/ticket/PR context — <reason, and if the requirement came from a Jira link, that link itself satisfies this>
 ```
 
 ## Step 3: Summarize blockers, then stop
@@ -62,6 +62,6 @@ Leave the Decision section blank for the human reviewer to complete — that's t
 
 ## Example
 
-**Input:** "Run the checklist on this Gherkin scenario set against ticket QA-1042's acceptance criteria: [paste scenarios] [paste AC]."
+**Input:** "Run the checklist on this Gherkin scenario set against https://mycompany.atlassian.net/browse/QA-1042: [paste scenarios]."
 
-**Output:** The item-by-item assessment above, ending in an unchecked Decision block ready for the actual reviewer to complete and sign.
+**Output:** The AC gets fetched from Jira via the Atlassian MCP tools rather than asked for, then the item-by-item assessment above, ending in an unchecked Decision block ready for the actual reviewer to complete and sign.
