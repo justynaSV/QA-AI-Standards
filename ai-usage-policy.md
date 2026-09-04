@@ -1,11 +1,12 @@
 # AI Usage Policy for QA Team
 
-**Version:** 1.2
-**Last updated:** 2026-08-17
+**Version:** 1.3
+**Last updated:** 2026-09-04
 
 ## Changelog
 | Version | Date | Change |
 |---|---|---|
+| 1.3 | 2026-09-04 | Added `test-cases-generator` as a specialized standards repo (test case generation, own `/generate-test-case` mechanism) across hub docs |
 | 1.2 | 2026-08-17 | Cross-referenced `skills/`; clarified that the review requirement applies to skill-produced output the same as ad-hoc prompting |
 | 1.1 | 2026-08-07 | Removed onboarding template reference; added glossary and prompt examples links |
 | 1.0 | — | Initial policy: allowed/prohibited usage, review requirement, risk escalation, traceability, data handling |

@@ -8,6 +8,7 @@ Detailed standards for specific areas are maintained in dedicated repositories:
 - Postman testing standards: https://github.com/justynaSV/postman-testing
 - Gherkin scenarios standards: https://github.com/justynaSV/gherkin-scenarios-tmp
 - Playwright testing standards: https://github.com/justynaSV/playwright-testing (scaffold, conventions in progress)
+- Test case generation: https://github.com/justynaSV/test-cases-generator
 
 ---
 
@@ -55,6 +56,7 @@ For each QA task:
    - API/Postman work → `justynaSV/postman-testing`, or `skills/qa-postman-assertion-reviewer` for a quick script review
    - BDD/Gherkin work → `justynaSV/gherkin-scenarios-tmp` (or your project's copy of the `gherkin-scenarios` template) — use `/gherkin-scenarios` Copilot prompt to draft scenarios directly, no hub skill needed
    - Playwright test work → `justynaSV/playwright-testing`
+   - Test case generation (Azure DevOps-import-ready CSV) → `justynaSV/test-cases-generator` — use its `/generate-test-case` Copilot/Claude Code slash-command, no hub skill needed
 3. Apply domain-specific constraints from the current project repository
 4. Complete `templates/ai-output-review-checklist.md` before accepting AI-assisted output — or run `skills/qa-ai-output-review-checklist-runner` for an item-by-item pass
 

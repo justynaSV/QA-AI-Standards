@@ -15,6 +15,12 @@ Superseded — don't prompt from scratch for this one. Use the `/gherkin-scenari
 
 ---
 
+## 1a. Full test case scenarios (Azure DevOps import)
+
+Superseded — don't prompt from scratch for this one either. Use the `/generate-test-case` slash-command (Copilot or Claude Code) built into `justynaSV/test-cases-generator`. It interviews you for the missing details, generates against that repo's own style guide/examples, and validates the CSV output before you import it. See `how-to-use-existing-repos.md`.
+
+---
+
 ## 2. Generating negative/boundary cases
 
 **Weak prompt:**
