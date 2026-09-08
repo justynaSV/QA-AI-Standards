@@ -28,13 +28,13 @@ It does **not** replace project-specific testing strategy or domain-specific rul
 - `glossary.md` — shared definitions of key terms used across this hub
 - `templates/ai-output-review-checklist.md` — mandatory checklist before accepting AI-generated artifacts
 - `templates/prompt-examples.md` — mini library of good/bad prompt examples for common QA tasks
-- `skills/` — ready-to-use Claude Skills for common QA tasks (see [Skills](#skills) below)
+- `skills/` — ready-to-use Agent Skills for common QA tasks (see [Skills](#skills) below)
 
 ---
 
 ## Skills
 
-`skills/` contains ready-to-use Claude Skills for common QA tasks. Unlike `templates/prompt-examples.md`, these aren't copy-paste text — once saved, Claude applies them automatically when a task matches, without you having to open this repo and find the right prompt. They don't replace the standards above; every skill routes back to `ai-usage-policy.md` and `templates/ai-output-review-checklist.md` before its output is accepted.
+`skills/` contains ready-to-use Agent Skills (`SKILL.md` files) for common QA tasks. Unlike `templates/prompt-examples.md`, these aren't copy-paste text — once made available to your AI agent (Claude, GitHub Copilot, or any tool that supports the `SKILL.md` format), it applies them automatically when a task matches, without you having to open this repo and find the right prompt. They don't replace the standards above; every skill routes back to `ai-usage-policy.md` and `templates/ai-output-review-checklist.md` before its output is accepted.
 
 - `skills/qa-boundary-case-generator` — generates boundary and negative test cases for a single field/parameter as a table (input, expected result, reasoning)
 - `skills/qa-bug-report-rewriter` — restructures a bug report into Summary/Steps to Reproduce/Expected/Actual/Environment without adding unconfirmed claims
@@ -42,8 +42,8 @@ It does **not** replace project-specific testing strategy or domain-specific rul
 - `skills/qa-ai-output-review-checklist-runner` — walks a specific AI-generated artifact through `templates/ai-output-review-checklist.md` item by item, leaving the final decision to the human reviewer
 
 ### Using a skill
-1. Save it — open the skill's file and use "Save skill" (if your org allows skill creation), or place the `skills/<name>/` folder in a project's `.claude/skills/` directory if you're working in Claude Code.
-2. Describe your task normally (e.g. "draft Gherkin scenarios for this AC: ...") — Claude checks the skill's description and applies it automatically when it matches. No skill-saving feature available? The `SKILL.md` is just markdown — paste its contents into your prompt directly.
+1. Make it available to your agent — in Claude, use "Save skill" (if your org allows skill creation) or place the `skills/<name>/` folder in a project's `.claude/skills/` directory if you're working in Claude Code; in VS Code/GitHub Copilot, place it under the workspace or user skills folder your setup expects.
+2. Describe your task normally (e.g. "draft Gherkin scenarios for this AC: ...") — the agent checks the skill's description and applies it automatically when it matches. No skill-loading feature available? The `SKILL.md` is just markdown — paste its contents into your prompt directly.
 3. Treat the output as a draft. It still needs `templates/ai-output-review-checklist.md` and the `AI-assisted: yes (scope: ...)` tag before it's accepted, per `ai-usage-policy.md`.
 
 ---
